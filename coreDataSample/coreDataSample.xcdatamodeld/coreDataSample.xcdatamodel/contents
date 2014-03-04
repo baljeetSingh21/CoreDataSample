@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="FoodDetail" representedClassName="FoodDetail" syncable="YES">
+        <attribute name="amt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="foodid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="foonItem" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="payment" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="staffID" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="StaffRecord" inverseName="foodinfo" inverseEntity="StaffRecord" syncable="YES"/>
+    </entity>
+    <entity name="StaffRecord" representedClassName="StaffRecord" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contactNo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="staffID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="staffName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="foodinfo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FoodDetail" inverseName="staffID" inverseEntity="FoodDetail" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="StaffRecord" positionX="-7067" positionY="-5191" width="128" height="118"/>
+        <element name="FoodDetail" positionX="-6804" positionY="-5328" width="153" height="118"/>
+    </elements>
+</model>
